@@ -190,7 +190,7 @@
     </div> <!-- /#services -->
 
 	<div class="slide story" id="slide-4" data-slide="4">
-
+<!-- aaaa -->
 		<div class="container">
 			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 	 <responsive-embed ratio="16:9">
@@ -198,17 +198,14 @@
 	 </responsive-embed> 
  	 </div>
 	
-	<div class="slide story" id="slide-4" data-slide="4">
-		<div class="container">
-			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			
-				<div id="myslider">
+	<div class="container">
+		<div class="row mt centered">
+			<div id="myslider">
 					<img src="http://placehold.it/350x250">
 					<img src="http://placekitten.com/g/350/250">
-				</div>
-	
 			</div>
 		</div>
+	</div>
 	</div>
 
     <div id="contact" class="content-section">
@@ -290,7 +287,18 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-	<script src="../src/simpleslider.js"></script>
+  <script src="../src/simpleslider.js"></script>
+  <script>
+    var imgSlider = new SimpleSlider(
+      document.getElementById('myslider'),
+      {
+        transitionProperty: 'opacity',
+        startValue: 0,
+        visibleValue: 1,
+        endValue: 0
+      }
+    );
+  </script>
     <!-- templatemo 401 sprint -->
 </body>
 </html>
