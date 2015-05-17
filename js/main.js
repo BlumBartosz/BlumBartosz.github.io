@@ -44,19 +44,21 @@
 
 })(window, jQuery);
 
-var map = '';
+var map;
+var ajaxRequest;
+var plotlist;
+var plotlayers=[];
 
-function initialize() {
-    var mapOptions = {
-      zoom: 14,
-      center: new google.maps.LatLng(16.8461789,96.1309764)
-    };
-    map = new google.maps.Map(document.getElementById('map'),  mapOptions);
+function initmap() {
+	// set up the map
+	map = new L.Map('map');
+
+	// create the tile layer with correct attribution
+	var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+	var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+	var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 12, attribution: osmAttrib});		
+
+	// start the map in South-East England
+	map.setView(new L.LatLng(51.3, 0.7),9);
+	map.addLayer(osm);
 }
-
-// load google map
-var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' +
-        'callback=initialize';
-    document.body.appendChild(script);
