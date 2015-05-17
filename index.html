@@ -24,8 +24,17 @@
 	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 	<script src="polymer.min.js"></script>
-	<link rel="import" href="polymer-slideshow.html">
-	<link rel="import" href="bower_components/polymer-slideshow/polymer-slideshow.html"> 
+
+	<!-- Polymer elemeneds -->
+  <script src="bower_components/platform/platform.js"></script>
+  <link rel="import" href="bower_components/polymer-simple-slider/src/simple-slider.html">
+ <style>
+      .nav-example { position: relative; width: 612px; height: 612px; }
+      .nav-slider { position: absolute; top: 0px; left: 0px; z-index: 1;}
+      #myslider { width:612px; height:612px; }
+      a.slide-button { position: absolute; padding: 300px 0px 0px 15px; top: 0px; left: 0px; z-index: 12; width: 30px; height: 612px; color: #FFF; background-color: rgba(0,0,0,0.4); text-decoration: none; font-weight: 600; box-sizing: border-box; }
+      #next-button { left: auto; right: 0px; }
+    </style> 
 
 </head>
 <body>
