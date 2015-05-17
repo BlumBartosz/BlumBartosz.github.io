@@ -23,6 +23,8 @@
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<script src="polymer.min.js"></script>
+	<link rel="import" href="polymer-slideshow.html">
 
 </head>
 <body>
@@ -186,6 +188,20 @@
 	 </responsive-embed> 
  	 </div>
 	
+	<div class="slide story" id="slide-4" data-slide="4">
+		<div class="container">
+			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+			
+				<polymer-slideshow>
+					<img src="http://placehold.it/350x250">
+					<img src="http://placekitten.com/g/350/250">
+				</polymer-slideshow>
+	
+			</div>
+		</div>
+	</div>
+	
+	
 	
     <div id="products" class="content-section">
         <div class="container">
@@ -340,7 +356,7 @@
                         // add an OpenStreetMap tile layer
                         L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'}).addTo(map);
                         // add a marker in the given location, attach some popup content to it and open the popup
-                        L.marker([54.0374006, 19.0652487]).addTo(map).bindPopup('Tu mieszkamy').openPopup();
+                        L.marker([54.0374006, 19.0652487]).addTo(map).bindPopup('Tu mieszkam').openPopup();
                        </script>
 					  </div>
 				</div> <!-- /.col-md-6 -->
